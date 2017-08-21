@@ -42,15 +42,15 @@ VALUES
   (0.25,'Wrigleys Gum',12,(SELECT machine_id FROM machine WHERE location='2nd Floor')),
   (1.00,'Sprite',7,(SELECT machine_id FROM machine WHERE location='3rd Floor')),
   (1.00,'Coca-Cola',5,(SELECT machine_id FROM machine WHERE location='3rd Floor')),
-  (1.00,'Smokes',10,(SELECT machine_id FROM machine WHERE location='3rd Floor'));
-  
+  (7.00,'Smokes',10,(SELECT machine_id FROM machine WHERE location='3rd Floor'));
+
 
 
 
 INSERT INTO purchase
-VALUES('2017-08-17 09:00:00',(SELECT machine_id FROM machine WHERE location='2nd Floor'),(SELECT item_id FROM item WHERE name='Doritos'), 5.00, 4.00),
-('2017-08-17 13:45:00',(SELECT machine_id FROM machine WHERE location='3rd Floor'),(SELECT item_id FROM item WHERE name='CocaCola'),1.00,0),
-('2017-08-16 12:15:00',(SELECT machine_id FROM machine WHERE location='1st Floor'),(SELECT item_id FROM item WHERE name='Jack Daniels'), 10.00, 4.00);
+VALUES('2017-08-17 09:00:00',(SELECT machine_id FROM machine WHERE location='2nd Floor'),(SELECT item_id FROM item WHERE name='Wrigleys Gum'), 5.00, 4.75),
+('2017-08-17 13:45:00',(SELECT machine_id FROM machine WHERE location='3rd Floor'),(SELECT item_id FROM item WHERE name='7UP'),1.00,0),
+('2017-08-16 12:15:00',(SELECT machine_id FROM machine WHERE location='1st Floor'),(SELECT item_id FROM item WHERE name='Smokes'), 10.00, 3.00);
 
 SELECT * FROM machine;
 SELECT * FROM item;
