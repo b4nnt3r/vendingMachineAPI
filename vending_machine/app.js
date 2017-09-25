@@ -1,7 +1,5 @@
 const express = require('express');
-const {
-  Client
-} = require('pg');
+const { Client } = require('pg');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -17,7 +15,7 @@ const client = new Client({
 client.connect();
 
 app.get('/', function(request, response) {
-  response.send('ok so you want a snack');
+  response.send('Would you like a snack?');
 });
 
 app.get('/machines', function(request, response) {
